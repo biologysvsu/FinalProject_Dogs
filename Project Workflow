@@ -7,10 +7,6 @@
   ```
 - When prompted, type your password. You will not see any characters appear on the screen as you type (not even * symbols), but your input is still being recorded. Press Enter when done.
 
-GO TO PERSONAL STORAGE DIRECTORY
-Navigate to your personal storage directory:
-cd /ocean/projects/bio260081p/your-username
-
 ## GO TO PERSONAL STORAGE DIRECTORY
 - Navigate to your personal storage directory:
   ```bash
