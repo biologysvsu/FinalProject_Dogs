@@ -11,3 +11,8 @@ GO TO PERSONAL STORAGE DIRECTORY
 Navigate to your personal storage directory:
 cd /ocean/projects/bio260081p/your-username
 
+## GO TO PERSONAL STORAGE DIRECTORY
+- Navigate to your personal storage directory:
+  ```bash
+  cd /ocean/projects/bio260081p/your-psc-username
+  ```
