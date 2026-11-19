@@ -12,3 +12,28 @@
   ```bash
   cd /ocean/projects/bio260081p/your-psc-username
   ```
+DOWNLOAD SEQUENCING DATA FROM NCBI
+We will use the NCBI Sequence Read Archive (SRA) to retrieve whole-genome sequencing (WGS) data from five Labrador Retrievers and five French Bulldogs.
+
+Labrador Retriever Samples
+prefetch SRR23628612
+prefetch SRR29398833
+prefetch SRR35557651
+prefetch SRR23628673
+prefetch SRR23628682
+
+French Bulldog Samples
+prefetch SRR23628665
+prefetch SRR27051485
+prefetch SRR23628636
+prefetch SRR35533785
+prefetch SRR35538214
+
+After downloading the SRA files, convert them into FASTQ format using fasterq-dump.
+
+bash
+fasterq-dump SRR23628612 --split-files
+Repeat for all 10 samples.
+
+The --split-files option separates paired-end reads into forward and reverse FASTQ files when applicable.
+FASTQ files will be used as input for downstream quality control and Bowtie2 alignment.
