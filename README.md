@@ -27,7 +27,7 @@ vi accessions.txt
 ```
 - Copy and paste "accessions.txt"
 - Exit (esc) and save by typing ":wq" and hitting enter.
-
+##SETTING UP OUR TOOLS
 ```
 module load anaconda3
 conda create -n sra-tools -c bioconda -c conda-forge sra-tools
