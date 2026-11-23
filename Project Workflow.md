@@ -12,11 +12,39 @@
   ```bash
   cd /ocean/projects/bio260081p/your-psc-username
   ```
-Create a new directory: Dogs
-cD into Dogs
-Create new directory: fastq_files
-cd fastq_files
-submit sra job to download files
-  ```
-  sbatch sra_genes.fastq.slurm
-  ```
+- Create a new directory: Dogs
+- cD into Dogs
+
+vi accessions.txt
+copy and paste the 10 dog accessions in here
+exit and save
+
+```
+module load anaconda3
+conda create -n sra-tools -c bioconda -c conda-forge sra-tools
+```
+```
+vi download_sra.sh
+```
+- Type I
+```
+#!/bin/bash
+module load anaconda3
+conda activate sra-tools
+ while read -r SRR; do
+   echo "Downloading $SRR..."
+   prefetch --max-size 100G $SRR 
+   fasterq-dump --gzip $SRR --split-files -O fastq_files/
+done < accessions.txt
+conda deactivate
+```
+vi genes.fasta
+copy and paste 5 gene sequences
+exit with :wq
+
+vi assembly.slurm
+copy and paste script 
+exit and save
+
+execute assembly.slurm: sbatch assembly.slurm
+
