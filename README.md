@@ -32,6 +32,7 @@ vi accessions.txt
 module load anaconda3
 conda create -n sra-tools -c bioconda -c conda-forge sra-tools
 ```
+- Now we'll make an anaconda script to split all of our SRR genes in to forward (_1) and reverse (_2) reads
 ```
 vi download_sra.sh
 ```
