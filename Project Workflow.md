@@ -44,13 +44,13 @@ conda deactivate
 ```
 vi genes.fasta
 ```
-copy and paste 5 gene sequences
-exit with :wq
+Copy and paste 5 gene sequences
+Exit and save
 ```
 vi assembly.slurm
 ```
-copy and paste script 
-exit and save
+Copy and paste script, making sure you change the email to reflect your own.
+Exit and save
 
-execute assembly.slurm: ```sbatch assembly.slurm```
+Execute assembly.slurm: ```sbatch assembly.slurm```
 
