@@ -12,15 +12,21 @@
   ```bash
   cd /ocean/projects/bio260081p/your-psc-username
   ```
-- Create a new directory: Dogs
+## Creating a file for the dogs breed SRR numbers
+- Create a new directory: Dogs.
 ```
-cd Dogs
+mkdir Dogs
 ```
+- Navigate to your new directory.
+```
+cd /Dogs
+```
+- Create a text file containing 10 sample SRR numbers for the dog breeds.
 ```
 vi accessions.txt
 ```
-copy and paste the 10 dog accessions in here
-exit and save
+- copy and paste the 10 dog accessions in here then
+exit and save by typing ":wq" and hitting enter.
 
 ```
 module load anaconda3
