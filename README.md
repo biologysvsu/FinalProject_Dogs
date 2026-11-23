@@ -35,7 +35,7 @@ conda create -n sra-tools -c bioconda -c conda-forge sra-tools
 ```
 vi download_sra.sh
 ```
-- Type I
+- Type "i" to edit, then copy and paste the following
 ```
 #!/bin/bash
 module load anaconda3
@@ -47,10 +47,11 @@ conda activate sra-tools
 done < accessions.txt
 conda deactivate
 ```
+
 ```
 vi genes.fasta
 ```
-Copy and paste 5 gene sequences from GitHub
+Copy and paste "genes.fasta" from GitHub
 Exit and save
 ```
 vi assembly.slurm
