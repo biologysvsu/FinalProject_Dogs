@@ -54,15 +54,15 @@ conda deactivate
 ```
 vi genes.fasta
 ```
-Copy and paste "genes.fasta" from GitHub
+- Copy and paste "genes.fasta" from GitHub
 Exit and save
 ```
 vi assembly.slurm
 ```
-Copy and paste script, making sure you change the email to reflect your own.
-Exit and save
+- Copy and paste script, making sure you change the email to reflect your own.
+- Exit and save
 
-Execute assembly.slurm: 
+-Execute assembly.slurm: 
 ```
 sbatch assembly.slurm
 ```
