@@ -83,6 +83,7 @@ bowtie2 \
     -1 "$FQ1" \
     -2 "$FQ2" \
     -p "$SLURM_CPUS_PER_TASK" |
+samtools view -@ $SLURM_CPUS_PER_TASK -bS - | \
 samtools sort \
     -@ "$SLURM_CPUS_PER_TASK" \
     -m 4G \
