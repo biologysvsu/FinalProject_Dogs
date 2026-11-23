@@ -12,7 +12,7 @@
   ```bash
   cd /ocean/projects/bio260081p/your-psc-username
   ```
-## Creating a file for the dogs breed SRR numbers
+## CREATING OUR WORKING DIRECTORY AND GENOME DATA
 - Create a new directory: Dogs.
 ```
 mkdir Dogs
@@ -50,6 +50,7 @@ conda deactivate
 ```
 - Now exit (esc) and save (:wq)
 ## COMPARING THE GENOMES TO THE GENES
+- First, our genes must be accessible, so let's make sure they're in our directory
 ```
 vi genes.fasta
 ```
