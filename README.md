@@ -25,7 +25,7 @@ cd /Dogs
 ```
 vi accessions.txt
 ```
-- Copy and paste the 10 dog accessions in here then
+- Copy and paste "accessions.txt"
 - Exit (esc) and save by typing ":wq" and hitting enter.
 
 ```
