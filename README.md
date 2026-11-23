@@ -44,7 +44,7 @@ conda activate sra-tools
  while read -r SRR; do
    echo "Downloading $SRR..."
    prefetch --max-size 100G $SRR 
-   fasterq-dump --gzip $SRR --split-files -O fastq_files/
+   fasterq-dump $SRR --split-files -O fastq_files/
 done < accessions.txt
 conda deactivate
 ```
