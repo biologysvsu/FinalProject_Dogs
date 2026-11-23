@@ -27,7 +27,7 @@ vi accessions.txt
 ```
 - Copy and paste "accessions.txt"
 - Exit (esc) and save by typing ":wq" and hitting enter.
-## SETTING UP OUR TOOLS
+## SETTING UP OUR GENOMES
 ```
 module load anaconda3
 conda create -n sra-tools -c bioconda -c conda-forge sra-tools
@@ -48,7 +48,8 @@ conda activate sra-tools
 done < accessions.txt
 conda deactivate
 ```
-
+- Now exit (esc) and save (:wq)
+## COMPARING THE GENOMES TO THE GENES
 ```
 vi genes.fasta
 ```
