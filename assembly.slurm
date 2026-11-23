@@ -2,7 +2,7 @@
 #SBATCH --job-name=bowtie_gc
 #SBATCH --output=bowtie_gc_%A_%a.out
 #SBATCH --error=bowtie_gc_%A_%a.err
-#SBATCH --array=0-10
+#SBATCH --array=0-9
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G #increase as needed
