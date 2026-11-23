@@ -19,7 +19,7 @@ mkdir Dogs
 ```
 - Navigate to your new directory.
 ```
-cd /Dogs
+cd Dogs
 ```
 - Create a text file containing 10 sample SRR numbers for the dog breeds.
 ```
