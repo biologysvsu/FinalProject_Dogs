@@ -12,3 +12,11 @@
   ```bash
   cd /ocean/projects/bio260081p/your-psc-username
   ```
+Create a new directory: Dogs
+cD into Dogs
+Create new directory: fastq_files
+cd fastq_files
+submit sra job to download files
+  ```
+  sbatch sra_genes.fastq.slurm
+  ```
