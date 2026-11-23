@@ -49,6 +49,10 @@ done < accessions.txt
 conda deactivate
 ```
 - Now exit (esc) and save (:wq)
+- Run the script
+```
+bash download_sra.sh
+```
 ## COMPARING THE GENOMES TO THE GENES
 - First, our genes must be accessible, so let's make sure they're in our directory
 ```
