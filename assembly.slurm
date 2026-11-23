@@ -16,7 +16,7 @@ module load bcftools
 module load bedtools
 
 # Directories
-mkdir -p bam_outputs consensus_fastas
+mkdir -p bam_outputs consensus_fastas gc_windows
 
 # Reference genome (FASTA)
 REF="genes.fasta"
