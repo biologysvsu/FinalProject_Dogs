@@ -13,9 +13,12 @@
   cd /ocean/projects/bio260081p/your-psc-username
   ```
 - Create a new directory: Dogs
-- cD into Dogs
-
+```
+cd Dogs
+```
+```
 vi accessions.txt
+```
 copy and paste the 10 dog accessions in here
 exit and save
 
