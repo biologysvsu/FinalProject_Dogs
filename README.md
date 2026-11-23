@@ -25,8 +25,8 @@ cd /Dogs
 ```
 vi accessions.txt
 ```
-- copy and paste the 10 dog accessions in here then
-exit and save by typing ":wq" and hitting enter.
+- Copy and paste the 10 dog accessions in here then
+Exit and save by typing ":wq" and hitting enter.
 
 ```
 module load anaconda3
