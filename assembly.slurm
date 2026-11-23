@@ -16,7 +16,7 @@ module load bcftools
 module load bedtools
 
 # Directories
-mkdir -p bam_outputs consensus_fastas gc_windows
+mkdir -p bam_outputs consensus_fastas vcf_output
 
 # Reference genome (FASTA)
 REF="genes.fasta"
@@ -54,15 +54,15 @@ samtools index "bam_outputs/${SAMPLE}.sorted.bam"
 
 # Step 2: Variant calling
 bcftools mpileup -Ou -f "$REF" "bam_outputs/${SAMPLE}.sorted.bam" | \
-  bcftools call -mv -Oz -o "gc_windows/${SAMPLE}.vcf.gz"
-bcftools index "gc_windows/${SAMPLE}.vcf.gz"
+  bcftools call -mv -Oz -o "vcf_output/${SAMPLE}.vcf.gz"
+bcftools index "vcf_output/${SAMPLE}.vcf.gz"
 
 # Step 3: Generate consensus FASTA
-bcftools consensus -f "$REF" "gc_windows/${SAMPLE}.vcf.gz" > "consensus_fastas/${SAMPLE}.fasta"
+bcftools consensus -f "$REF" "vcf_output/${SAMPLE}.vcf.gz" > "consensus_fastas/${SAMPLE}.fasta"
 
 # Step 4: GC content in 500 bp windows #Here is where you should and your selection metrics
 samtools faidx "consensus_fastas/${SAMPLE}.fasta"
-bedtools makewindows -g "consensus_fastas/${SAMPLE}.fasta.fai" -w 500 > "gc_windows/${SAMPLE}_windows.bed"
-bedtools nuc -fi "consensus_fastas/${SAMPLE}.fasta" -bed "gc_windows/${SAMPLE}_windows.bed" > "gc_windows/${SAMPLE}_gc.tsv"
+bedtools makewindows -g "consensus_fastas/${SAMPLE}.fasta.fai" -w 500 > "vcf_output/${SAMPLE}_windows.bed"
+bedtools nuc -fi "consensus_fastas/${SAMPLE}.fasta" -bed "gc_windows/${SAMPLE}_windows.bed" > "vcf_output/${SAMPLE}_gc.tsv"
 
 echo "✅ Finished $SAMPLE"
