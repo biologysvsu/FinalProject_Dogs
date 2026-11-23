@@ -12,7 +12,7 @@
 module load sra-toolkit
 
 # Set the storage directory. We dont want any large files outside the storage directory.
-STORAGE_DIR="/ocean/projects/agr250001p/username"
+STORAGE_DIR="/ocean/projects/bio260081p/username/Dogs/fastq_files"
 
 # Navigate to the storage directory
 cd $STORAGE_DIR
